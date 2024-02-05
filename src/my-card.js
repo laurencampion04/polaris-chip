@@ -18,14 +18,31 @@ export class MyCard extends LitElement {
 
   static get styles() {
     return css`
-      :host {
-        display: block;
+      #card-list {
+        display: flex; 
+      }
+      img {
+        width: 50%; 
+
+      }
+      .card { 
+        font-size: 25px;
+        display: inline-flex; 
+        width: 800px;
+        height: 440px; 
+        padding: 8px; 
+        margin: 8px; 
+        background-color: pink;  
+      }
+      h1{
+        font-size: 30px;
+        margin-left: 300px; 
       }
     `;
   }
 
   render() {
-    return html`<div>${this.title}</div>`;
+    return html`<div>${this.title}</div>`; 
   }
 
   static get properties() {
