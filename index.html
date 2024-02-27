@@ -13,17 +13,146 @@
     body {
       margin: 0;
       padding: 0;
+      align-items: center;
       font-family: sans-serif;
       background-color: #ededed;
     }
+
+    #cardlist{
+      display: flex; 
+    }
+
+    .card{
+      background-color: #e7198a; 
+      border: 4px solid var(--border-color, #000000); 
+      padding: 20px; 
+      border-radius: 20px;
+      width: 450px;  
+      height: 750px; 
+    }
+    .btn{
+      background-color: #c29fff; 
+      width: 70px;
+      height: 30px; 
+      font-size: 15px;
+      border-color: blueviolet; 
+    }
+
+    img{
+      width: 400px; 
+      height: 300px;
+      padding: 20px; 
+    }
+    h1{
+      font-size: 40px; 
+    }
+
+    h2{
+      font-size: 30px; 
+    }
+
+    h3{
+      font-size: 15px; 
+    }
+
+    h4{
+      font-size: 15px; 
+    }
+
+    .duplicate {
+      background-color: #000000; 
+      width: 150px;
+      height: 30px; 
+      margin-bottom: 10px; 
+      font-size: 15px; 
+      color: #ffff; 
+      border: 4px solid var(--border-color, #ffbef7); 
+    }
+
     polaris-chip {
       margin: 16px;
     }
+
+    .card2{
+      background-color: #3a2fd8; 
+      border: 4px solid var(--border-color, #50cae2); 
+      padding: 20px; 
+      border-radius: 20px;
+      width: 450px;  
+      height: 750px; 
+      margin-left: 500px; 
+      margin-inline: 500px;
+      margin-top: -730px; 
+    }
+    h5{
+      font-size: 25px;
+      color: #ededed; 
+    }
+
+    h6{
+      font-size: 15px; 
+      color: #ededed; 
+    }
+
+    h7 {
+      font-size: 15px; 
+      color: #ededed; 
+    }
+
+    .btn2{
+      background-color: rgb(83, 201, 208); 
+      width: 70px;
+      height: 30px; 
+      font-size: 15px; 
+      border-color: #ededed;
+    }
+
+    .card3{
+      background-color: #ff0011; 
+      border: 4px solid var(--border-color, #ffea00); 
+      padding: 20px; 
+      border-radius: 20px;
+      width: 450px;  
+      height: 750px; 
+      margin-left: 500px; 
+      margin-inline: 500px;
+      margin-top: -580px; 
+    }
+    h8{
+      font-size: 25px;
+      color: #ffdd00; 
+    }
+
+    h9{
+      font-size: 15px; 
+      color: #ededed; 
+      margin: 300px;
+      margin-left: 114px;  
+      margin-right: 10px; 
+    }
+
+    h10 {
+      font-size: 15px; 
+      color: #ededed; 
+    }
+
+    .btn3{
+      background-color: #ffdd00; 
+      width: 70px;
+      height: 30px; 
+      font-size: 16px; 
+      border-color: #000000;
+    }
+
   </style>
   <title>polaris-chip / my-card</title>
 </head>
 
 <body>
+  <h1>counter-app</h1>
+  <counter-app></counter-app>
+  <counter-app min="1" max="50" counter="25"></counter-app> 
+
   <h1>polaris-chip</h1>
   <!-- this is going to do whatever the tag's defaults are -->
   <polaris-chip title="New of Record" link = "https://psu.edu"></polaris-chip> 
@@ -31,23 +160,26 @@
   <polaris-chip title="Sport are the only thing that matters"></polaris-chip> 
   <polaris-chip title="Grants and Donations"></polaris-chip> 
   <!-- this is going to take the tag and change the title --> 
-  <h1>my-card</h1>
 
-
+  
+  
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
   <script type="module" src="./src/my-card.js"></script>
+  <script type="module" src="counter-app.js"></script>
 </body>
 
 </html>
-<h1>The Cat Card</h1>
-<div class="control-wrapper">
-  <button class="duplicate">Duplicate Card</button>
+<h1>Lauren's Cards</h1> 
+<div class="control-wrapper"> 
+  <my-card title="The Computer Cats" imageSrc="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy80MTQwOTkxL29yaWdpbi5qcGciLCJleHBpcmVzX2F0IjoxNzQ3ODM0MDIwfQ.QfIb9r1Q8dA6Jww0VaU7TrZ21W1Or3tj1oDUOLSfhq0/img.jpg?width=742&quality=85" bodyText="The Coding Cat" link="https://hax.psu.edu" backgroundColor="#000000" borderColor="#000000"></my-card>
+  <button class="duplicate">Duplicate Card</button> 
 </div> 
-<div id="cardlist">
+
+<div id="cardlist"> 
   <div class="card"> 
-    <img class="card-image" src="https://www.lifesavvy.com/p/uploads/2020/10/269d4e5a.jpg?width=1200" />
-    <div class="card-text">
+    <img class="card-image" src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy80MTQwOTkxL29yaWdpbi5qcGciLCJleHBpcmVzX2F0IjoxNzQ3ODM0MDIwfQ.QfIb9r1Q8dA6Jww0VaU7TrZ21W1Or3tj1oDUOLSfhq0/img.jpg?width=742&quality=85" />
+    <div class="card-text"> 
       <h2 class="card-title"> The Coding Cat</h2>
       <h3 class="card-details">
         Toto the cat has been working hard on his coding assignment, when he discovers hax.psu.edu. He cannot wait to tell his friends about it so decides to link it down below on this card.  </h3>
@@ -62,3 +194,34 @@
   <button class="btn">Details</button> 
   </a> 
 </div> 
+
+<div id="cardlist2"> 
+  <div class="card2"> 
+    <img class="card-image2" src="https://i.insider.com/4e72ccfceab8ea2f01000002?width=600&format=jpeg&auto=webp" />
+    <div class="card-text"> 
+      <h5 class="card-title"> The Sleepy Cat</h5>
+      <h6 class="card-details">
+        Ginnie was working hard on her coding assignment when suddenly she got super sleepy. She decided to take a nap on her homework
+    <!--lit-part r0oeqfcyzeQ=-->
+    <figure part="fig">
+      <div class="btn-wrapper">
+  <a href="https://hax.psu.edu">
+  <button class="btn2">Details</button> 
+  </a> 
+</div> 
+
+<div id="cardlist3"> 
+  <div class="card3"> 
+    <img class="card-image3" src="https://external-preview.redd.it/3_9hIPmOuH0gCDCbcAbmz7SPxmEjzWHaNbJJdiHXdBc.jpg?width=640&crop=smart&auto=webp&s=e71ebc9fa3cdc27ee30dd9a6e08a0c1eb0cb5fee" />
+    <div class="card-text"> 
+      <h8 class="card-title"> The Computer Prodogy</h8>
+      <h9 class="card-details"> 
+        Howard is 3 weeks old and was born knowing every computer language. 
+    <!--lit-part r0oeqfcyzeQ=-->
+    <figure part="fig">
+      <div class="btn-wrapper">
+  <a href="https://hax.psu.edu">
+  <button class="btn3">Details</button> 
+  </a> 
+</div> 
+

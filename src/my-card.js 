@@ -1,0 +1,95 @@
+import { LitElement, html, css } from 'lit';
+
+/**
+ * Now it's your turn. Here's what we need to try and do
+ * 1. 
+ */
+
+export class MyCard extends LitElement {
+
+  static get tag() {
+    return 'my-card';
+  }
+
+  constructor() {
+    super();
+    this.title = "My Card";
+    this.imageSrc = "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy80MTQwOTkxL29yaWdpbi5qcGciLCJleHBpcmVzX2F0IjoxNzQ3ODM0MDIwfQ.QfIb9r1Q8dA6Jww0VaU7TrZ21W1Or3tj1oDUOLSfhq0/img.jpg?width=742&quality=85"; 
+    this.fancy = false; 
+  }
+
+  static get styles() {
+    return css`
+      :host {
+        display: block; 
+        --border-color: #000000; 
+      }
+
+      .card { 
+        font-size: 25px;
+        border: 2px solid var(--border-color, #E6AD00); 
+        width: 800px;
+        height: 440px; 
+        padding: 8px; 
+        margin: 8px; 
+        background-color: #e7198a; 
+      } 
+      .card-content {
+        padding: 20px; 
+      }
+
+      body{
+        margin: 0;
+        padding: 0;
+        height: 400px; 
+      }
+
+      .card-img { 
+        width: 10%; 
+        height: 10%;  
+      }
+      
+      h1{
+        font-size: 30px;
+        margin-left: 300px; 
+      }
+
+      details summary {
+        text-align: center;
+        font-size: 20px;
+        padding: 10px 0; 
+      }
+
+      details div{
+        border: 2px solid black;
+        text-align: center;
+        height: 50px;
+      }
+    `;
+  }
+
+  render() { 
+    return html` 
+    <div class="card">
+        <div class="card-content">
+          <h2>${this.title}</h2>
+          <img src="${this.imageSrc}" alt="Card Image">
+          <details ?open="${this.fancy}" @toggle="${this.openChanged}">
+            <summary>Details</summary>
+            <div><slot></slot></div>
+          </details>
+        </div>
+    </div>
+    `; 
+  }
+
+  static get properties() {
+    return {
+      title: { type: String },
+      image: { type: String, reflect: true}, 
+      borderColor: { type: String} 
+    };
+  }
+}
+
+globalThis.customElements.define(MyCard.tag, MyCard);
